@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Khater | AI Enthusiast</title>
+    <meta name="description"
+        content="Portfolio of Mohamed Ahmed Mohamed Khater - Python Learner and AI Enthusiast from Sudan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MK<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn"><i class="fas fa-sun"></i></button>
+                    <button id="lang-toggle" class="theme-btn lang-btn"
+                        style="margin-left: 10px; font-weight: bold;">AR</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="greeting" data-i18n="hero_greeting">Hello, I'm</p>
+                <h1 data-i18n="hero_name">Mohamed Ahmed Mohamed Khater</h1>
+                <h2 class="typing-text" data-i18n="hero_title">Python Learner | AI Enthusiast</h2>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="hero_location">Sudan</span>
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary" data-i18n="btn_projects">View Projects</a>
+                    <a href="#contact" class="btn secondary" data-i18n="btn_contact">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Replace 'path/to/your/photo.jpg' with your actual photo path -->
+                <div class="photo-placeholder">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span>Your Photo Here</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about_title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about_p1">I am a young Python learner from Sudan, interested in Artificial
+                        Intelligence and intelligent systems. I started learning programming early and focus on
+                        understanding concepts through practice, experimentation, and building small projects.</p>
+                    <p data-i18n="about_p2">I am learning Python with a focus on AI and data basics. I mainly learn
+                        through educational videos and by trying things myself, fixing mistakes, and improving my code.
+                    </p>
+                    <p data-i18n="about_p3">My goal is to continue learning Python and AI, improve my skills, and in the
+                        future become an AI Engineer working on intelligent and robotic systems.</p>
+                </div>
+                <div class="highlights">
+                    <div class="highlight-card">
+                        <i class="fas fa-robot"></i>
+                        <h3 data-i18n="card_ai_title">AI & Systems</h3>
+                        <p data-i18n="card_ai_desc">Focusing on intelligent systems</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-code"></i>
+                        <h3 data-i18n="card_python_title">Python</h3>
+                        <p data-i18n="card_python_desc">Building step by step</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-i18n="skill_prog">Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-i18n="skill_py">Python (Beginner-Intermediate)</span>
+                        <span class="skill-tag" data-i18n="skill_game_logic">Game Logic</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-i18n="skill_gamedev">Game Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pygame</span>
+                        <span class="skill-tag">Roblox Studio</span>
+                        <span class="skill-tag" data-i18n="skill_map">Map Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skill_tools">Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects_title">Projects</h2>
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="roblox_map.png" alt="Roblox Map" class="project-img">
+                </div>
+                <div class="card-icon"><i class="fas fa-cube"></i></div>
+                <h3 data-i18n="proj_roblox_title">Roblox Map</h3>
+                <p class="tech-stack">Roblox Studio</p>
+                <p data-i18n="proj_roblox_desc">A Roblox map I created that was played by 820+ players, helping me
+                    learn about game design and player interaction.</p>
+                <div class="project-actions">
+                    <a href="https://www.roblox.com/games/134300561660119/arbain-stealer" target="_blank"
+                        class="project-link" data-i18n="play_game">Play Game <i
+                            class="fas fa-external-link-alt"></i></a>
+                    <span class="status-badge available" data-i18n="status_available">Available</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title" data-i18n="exp_title">Experience & Learning</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+
+                    <div class="content">
+                        <h3 data-i18n="exp_role1">Independent Learner & Project Builder</h3>
+                        <ul>
+                            <li data-i18n="exp_list1_1">Practicing Python by building small programs and games</li>
+                            <li data-i18n="exp_list1_2">Learning AI and data basics step by step</li>
+                            <li data-i18n="exp_list1_3">Improving through mistakes and experimentation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+
+                    <div class="content">
+                        <h3 data-i18n="exp_role2">What I’m Learning Now</h3>
+                        <ul>
+                            <li data-i18n="exp_list2_1">Python fundamentals & NumPy basics</li>
+                            <li data-i18n="exp_list2_2">AI and intelligent systems concepts</li>
+                            <li data-i18n="exp_list2_3">Logical thinking and problem-solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact_title">Social Media</h2>
+            <div class="social-links">
+                <a href="https://github.com/de77fult" target="_blank" class="social-btn github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.youtube.com/@MohamedTechnology-z4c" target="_blank" class="social-btn youtube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+            <p class="copyright" data-i18n="copyright">&copy; 2025 Mohamed Ahmed Mohamed Khater. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="full-image">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
