@@ -50,10 +50,29 @@
                     <a href="#projects" class="btn primary" data-i18n="btn_projects">View Projects</a>
                     <a href="#contact" class="btn secondary" data-i18n="btn_contact">Contact Me</a>
                 </div>
+
+                <!-- Live Cyber Terminal Widget -->
+                <div class="cyber-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <span class="terminal-title"><i class="fas fa-terminal"></i> cybersec-monitor.sh</span>
+                    </div>
+                    <div class="terminal-body" id="cyber-logs">
+                        <!-- Simulated security logs will output dynamically -->
+                    </div>
+                </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image" id="hero-image-container">
                 <!-- Replace 'path/to/your/photo.jpg' with your actual photo path -->
-                <img src="profile.jpg" alt="Mohamed Ahmed Mohamed Khater">
+                <img src="profile.jpg" alt="Mohamed Ahmed Mohamed Khater" id="profile-photo-img">
+                <div class="photo-placeholder" id="profile-photo-placeholder" style="display: none;">
+                    <i class="fas fa-user-shield"></i>
+                    <h3 style="font-size: 1.5rem; margin-top: 10px;" data-i18n="photo_hidden">Profile Secured</h3>
+                </div>
             </div>
         </div>
     </header>
@@ -124,23 +143,9 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title" data-i18n="projects_title">Projects</h2>
-            <div class="project-card">
-                <div class="project-img-container">
-                    <img src="roblox_map.png" alt="Roblox Map" class="project-img">
-                </div>
-                <div class="card-icon"><i class="fas fa-cube"></i></div>
-                <h3 data-i18n="proj_roblox_title">Roblox Map</h3>
-                <p class="tech-stack">Roblox Studio</p>
-                <p data-i18n="proj_roblox_desc">A Roblox map I created that was played by 820+ players, helping me
-                    learn about game design and player interaction.</p>
-                <div class="project-actions">
-                    <a href="https://www.roblox.com/games/134300561660119/arbain-stealer" target="_blank"
-                        class="project-link" data-i18n="play_game">Play Game <i
-                            class="fas fa-external-link-alt"></i></a>
-                    <span class="status-badge available" data-i18n="status_available">Available</span>
-                </div>
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be dynamically loaded by script.js -->
             </div>
-        </div>
         </div>
     </section>
 
@@ -194,6 +199,138 @@
         <span class="close">&times;</span>
         <img class="modal-content" id="full-image">
         <div id="caption"></div>
+    </div>
+
+    <!-- Admin Dashboard Modal -->
+    <div id="admin-modal" class="admin-dashboard-modal" style="display: none;">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h2><i class="fas fa-user-cog"></i> <span data-i18n="admin_panel_title">Admin Control Center</span></h2>
+                <span class="admin-close">&times;</span>
+            </div>
+            
+            <!-- IP Verification View -->
+            <div id="admin-verification-view" class="admin-view">
+                <div class="verification-card">
+                    <div class="shield-icon"><i class="fas fa-shield-alt pulse"></i></div>
+                    <h3 data-i18n="verifying_identity">Verifying Identity...</h3>
+                    <p class="security-status" data-i18n="checking_ip">Checking visitor IP address against system policy...</p>
+                    <div class="ip-display" id="visitor-ip-display">IP: ...</div>
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <!-- Access Denied View -->
+            <div id="admin-denied-view" class="admin-view" style="display: none;">
+                <div class="verification-card denied">
+                    <div class="shield-icon text-danger"><i class="fas fa-lock"></i></div>
+                    <h3 data-i18n="access_denied">Access Denied</h3>
+                    <p class="security-status text-danger" data-i18n="ip_not_authorized">Your IP address is not authorized to access this administration panel.</p>
+                    <div class="ip-info-box">
+                        <div><strong>Authorized IP:</strong> 46.110.178.138</div>
+                        <div><strong>Your IP:</strong> <span id="denied-ip-val">...</span></div>
+                    </div>
+                    <p class="security-note" data-i18n="security_logged">This security incident has been logged. Cyber Security policy strictly enforces access controls.</p>
+                </div>
+            </div>
+
+            <!-- Dashboard View -->
+            <div id="admin-dashboard-view" class="admin-view" style="display: none;">
+                <div class="dashboard-grid">
+                    <!-- Photo Management Section -->
+                    <div class="dashboard-card photo-mgmt">
+                        <h3><i class="fas fa-image"></i> <span data-i18n="photo_mgmt">Photo Management</span></h3>
+                        <p class="card-desc" data-i18n="photo_mgmt_desc">Toggle visibility of your profile photo on the homepage.</p>
+                        
+                        <div class="photo-status-box">
+                            <div class="status-indicator">
+                                <span class="indicator-dot active" id="photo-status-dot"></span>
+                                <span id="photo-status-text" data-i18n="photo_visible">Photo Status: Visible</span>
+                            </div>
+                            <button id="toggle-photo-btn" class="btn-dashboard danger-btn">
+                                <i class="fas fa-trash-alt"></i> <span id="toggle-photo-btn-text" data-i18n="delete_photo_btn">Delete Profile Photo</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Add Project Section -->
+                    <div class="dashboard-card project-mgmt">
+                        <h3><i class="fas fa-plus-circle"></i> <span data-i18n="add_project">Add New Project</span></h3>
+                        <p class="card-desc" data-i18n="add_project_desc">Fill out details in English and Arabic to expand your portfolio.</p>
+                        
+                        <form id="add-project-form" class="admin-form">
+                            <!-- Dual language Title -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="proj-title-en">Project Title (EN)</label>
+                                    <input type="text" id="proj-title-en" required placeholder="e.g., Cyber Scan Tool">
+                                </div>
+                                <div class="form-group">
+                                    <label for="proj-title-ar" dir="rtl" style="text-align: right;">عنوان المشروع (AR)</label>
+                                    <input type="text" id="proj-title-ar" required placeholder="مثال: أداة الفحص السيبراني" dir="rtl">
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack and Status -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="proj-tech">Tech Stack (comma separated)</label>
+                                    <input type="text" id="proj-tech" required placeholder="e.g., Python, Socket, Kali">
+                                </div>
+                                <div class="form-group">
+                                    <label for="proj-status">Project Status</label>
+                                    <select id="proj-status">
+                                        <option value="available">Available / جاهز</option>
+                                        <option value="working">Working on / قيد العمل</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Links and Image selector -->
+                            <!-- Link -->
+                            <div class="form-group">
+                                <label for="proj-link">Project / Play Game Link</label>
+                                <input type="url" id="proj-link" required placeholder="https://...">
+                            </div>
+
+                            <!-- Dual Language Description -->
+                            <div class="form-group">
+                                <label for="proj-desc-en">Project Description (EN)</label>
+                                <textarea id="proj-desc-en" required rows="3" placeholder="Brief explanation of the project features, tools used, and what you learned..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-desc-ar" dir="rtl" style="text-align: right;">وصف المشروع (AR)</label>
+                                <textarea id="proj-desc-ar" required rows="3" placeholder="شرح مبسط لمميزات المشروع، الأدوات المستخدمة، وما تعلمته..." dir="rtl"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-dashboard primary-btn">
+                                <i class="fas fa-save"></i> <span data-i18n="save_project">Save & Publish Project</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Manage Projects Section -->
+                    <div class="dashboard-card project-list-mgmt">
+                        <h3><i class="fas fa-folder-open"></i> <span data-i18n="manage_projects">Manage Custom Projects</span></h3>
+                        <p class="card-desc" data-i18n="manage_projects_desc">View and delete the custom projects you have added to your portfolio.</p>
+                        
+                        <div class="custom-projects-list" id="admin-custom-projects-list">
+                            <!-- Custom projects dynamically listed with delete buttons -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cyber Notification Modal -->
+    <div id="cyber-alert" class="cyber-alert-overlay" style="display: none;">
+        <div class="cyber-alert-box">
+            <div class="cyber-alert-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3 id="cyber-alert-title">System Notification</h3>
+            <p id="cyber-alert-msg">Operation completed successfully.</p>
+            <button id="cyber-alert-btn" class="btn-dashboard primary-btn" style="margin-top: 15px; width: auto; padding: 10px 30px;">ACKNOWLEDGE</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
