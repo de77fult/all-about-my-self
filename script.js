@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projects_title: "Projects",
             proj_roblox_title: "Roblox Map",
             proj_roblox_desc: "A Roblox map I created that was played by 820+ players, helping me learn about game design and player interaction.",
-            play_game: "Play Game",
+            play_game: "Try Now",
             status_working: "Working on",
             status_available: "Available",
             exp_title: "Experience & Learning",
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projects_title: "المشاريع",
             proj_roblox_title: "خريطة روبلوكس",
             proj_roblox_desc: "خريطة روبلوكس أنشأتها وتم لعبها من قبل أكثر من 820 لاعب، مما ساعدني على تعلم تصميم الألعاب وتفاعل اللاعبين.",
-            play_game: "العب الآن",
+            play_game: "جرب الآن",
             status_working: "قيد العمل",
             status_available: "متاح",
             exp_title: "الخبرة والتعلم",
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const allProjects = [...defaultProjects, ...customProjects];
         
         // Detect if admin is authenticated or hash route is active
-        const isAdmin = localStorage.getItem('admin_authenticated') === 'true' || window.location.hash === '#admin';
+        const isAdmin = localStorage.getItem('admin_authenticated') === 'true' || window.location.hash === '#mohamed';
 
         container.innerHTML = '';
 
@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>${descText}</p>
                 <div class="project-actions">
                     <a href="${proj.link}" target="_blank" class="project-link" style="animation: none;">
-                        ${lang === 'ar' ? 'تشغيل اللعبة' : 'Play Game'} <i class="fas fa-external-link-alt"></i>
+                        ${translations[lang].play_game || 'Try Now'} <i class="fas fa-external-link-alt"></i>
                     </a>
                     ${isAdmin && isCustom ? `
                     <button class="btn-delete-card-proj danger-btn" data-id="${proj.id}" style="padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; border: 1px solid rgba(255, 51, 102, 0.3); background: rgba(255, 51, 102, 0.1); color: #ff3366;" title="${lang === 'ar' ? 'حذف المشروع' : 'Delete Project'}">
@@ -579,7 +579,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Detect router hash change triggers
     function checkHashRoute() {
-        if (window.location.hash === '#admin') {
+        if (window.location.hash === '#mohamed') {
             openAdminPanel();
         } else {
             if (adminModal && adminModal.style.display === 'flex') {

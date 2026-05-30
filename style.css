@@ -1,28 +1,24 @@
 :root {
-    --bg-color: #0d0d11;
-    --card-bg: #16161f;
-    --primary: #00f3ff;
-    /* Neon Cyan */
-    --secondary: #bd00ff;
-    /* Purple */
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0b0;
+    --bg-color: #060814; /* Stealth Space Navy */
+    --card-bg: #0b0e1e; /* Deep Charcoal Navy */
+    --primary: #00ffaa; /* Glowing Emerald Cyber Green */
+    --secondary: #00bfff; /* Neon Sky Blue */
+    --text-primary: #f0f5ff; /* Sleek Cyber White */
+    --text-secondary: #8b9bb4; /* Cool Slate Gray */
     --font-heading: 'Inter', sans-serif;
-    --nav-bg: rgba(13, 13, 17, 0.9);
-    --border-color: rgba(255, 255, 255, 0.1);
+    --nav-bg: rgba(6, 8, 20, 0.85);
+    --border-color: rgba(0, 255, 170, 0.12); /* Subtle green tinted borders */
 }
 
 body.light-mode {
-    --bg-color: #f0f2f5;
+    --bg-color: #f4f6fb;
     --card-bg: #ffffff;
-    --primary: #007bff;
-    /* Blue */
-    --secondary: #6610f2;
-    /* Purple */
-    --text-primary: #333333;
-    --text-secondary: #555555;
-    --nav-bg: rgba(255, 255, 255, 0.9);
-    --border-color: rgba(0, 0, 0, 0.1);
+    --primary: #00aa6c; /* Deep Green */
+    --secondary: #007bff; /* Royal Blue */
+    --text-primary: #1e2530;
+    --text-secondary: #5e6b7e;
+    --nav-bg: rgba(244, 246, 251, 0.9);
+    --border-color: rgba(0, 170, 108, 0.15);
 }
 
 * {
