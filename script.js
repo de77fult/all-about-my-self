@@ -591,6 +591,42 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', checkHashRoute);
     checkHashRoute(); // Check hash route on page load
 
+    // 3.5 Secret Admin Bypass (Easter Egg Override)
+    let deniedClicks = 0;
+    const deniedShieldIcon = document.querySelector('#admin-denied-view .shield-icon');
+    if (deniedShieldIcon) {
+        deniedShieldIcon.style.cursor = 'pointer';
+        deniedShieldIcon.addEventListener('click', () => {
+            deniedClicks++;
+            if (deniedClicks >= 5) {
+                deniedClicks = 0;
+                const currentLang = document.documentElement.lang || 'en';
+                const passcode = prompt(currentLang === 'ar' ? 'أدخل رمز التجاوز الأمني الخاص بالمسؤول:' : 'Enter Admin Security Override Passcode:');
+                if (passcode === 'mk-cyber-2026') {
+                    localStorage.setItem('admin_authenticated', 'true');
+                    
+                    if (adminDeniedView) adminDeniedView.style.display = 'none';
+                    if (adminDashboardView) adminDashboardView.style.display = 'block';
+                    
+                    renderProjects(currentLang);
+                    renderAdminProjectsList();
+                    
+                    showCyberAlert(
+                        currentLang === 'ar' ? 'تجاوز ناجح' : 'Bypass Granted',
+                        currentLang === 'ar' ? 'تم التحقق من رمز المرور وتجاوز جدار الحماية بنجاح!' : 'Passcode verified. Administrative firewall bypass successful!',
+                        true
+                    );
+                } else if (passcode !== null) {
+                    showCyberAlert(
+                        currentLang === 'ar' ? 'فشل التحقق' : 'Bypass Failed',
+                        currentLang === 'ar' ? 'رمز مرور غير صحيح. تم تسجيل محاولة الاختراق!' : 'Invalid passcode. Unauthorized override attempt logged!',
+                        false
+                    );
+                }
+            }
+        });
+    }
+
     // 4. Custom Project Addition Form
     const addProjectForm = document.getElementById('add-project-form');
     if (addProjectForm) {
