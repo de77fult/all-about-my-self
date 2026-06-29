@@ -19,21 +19,10 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">MK<span class="dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about" data-i18n="nav_about">About</a></li>
-                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
-                <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
-                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" class="theme-btn"><i class="fas fa-sun"></i></button>
-                    <button id="lang-toggle" class="theme-btn lang-btn"
-                        style="margin-left: 10px; font-weight: bold;">AR</button>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+            <a href="#" class="logo">M-TECH<span class="dot">.</span></a>
+            <div class="top-nav-controls">
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-sun"></i></button>
+                <button id="lang-toggle" class="theme-btn lang-btn" style="margin-left: 10px; font-weight: bold;">AR</button>
             </div>
         </div>
     </nav>
@@ -41,14 +30,18 @@
     <header class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <p class="greeting" data-i18n="hero_greeting">Hello, I'm</p>
-                <h1 data-i18n="hero_name">Mohamed Ahmed Mohamed Khater</h1>
-                <h2 class="typing-text" data-i18n="hero_title">Python Learner | Cyber Security</h2>
-                <p class="location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="hero_location">Sudan</span>
-                </p>
+                <div class="hero-badge">
+                    <span data-i18n="hero_greeting_pill">منور يا زميلي في مساحتي التقنية</span>
+                </div>
+                <h1 data-i18n="hero_name">معاك محمد وائل</h1>
+                <h2 class="typing-text" data-i18n="hero_title">Full-Stack Developer & Open Source Contributor</h2>
+                <p class="hero-desc" data-i18n="hero_desc">أنا محمد وائل، بعمل تطبيقات ويب متكاملة ومواقع طلقة، وبحب أشارك في بناء الأدوات مفتوحة المصدر وصناعة المحتوى، اللي بيفيد مجتمع المطورين على يوتيوب وتيك توك.</p>
+                
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn primary" data-i18n="btn_projects">View Projects</a>
-                    <a href="#contact" class="btn secondary" data-i18n="btn_contact">Contact Me</a>
+                    <a href="#projects" class="btn primary" data-i18n="btn_projects">بص على مشاريعي</a>
+                    <a href="https://www.youtube.com/@MohamedTechnology-z4c" target="_blank" class="btn secondary btn-youtube-follow">
+                        <i class="fab fa-youtube"></i> <span data-i18n="btn_youtube">تابعني على يوتيوب</span>
+                    </a>
                 </div>
 
                 <!-- Live Cyber Terminal Widget -->
@@ -67,11 +60,8 @@
                 </div>
             </div>
             <div class="hero-image" id="hero-image-container">
-                <!-- Replace 'path/to/your/photo.jpg' with your actual photo path -->
-                <img src="profile.jpg" alt="Mohamed Ahmed Mohamed Khater" id="profile-photo-img">
-                <div class="photo-placeholder" id="profile-photo-placeholder" style="display: none;">
-                    <i class="fas fa-user-shield"></i>
-                    <h3 style="font-size: 1.5rem; margin-top: 10px;" data-i18n="photo_hidden">Profile Secured</h3>
+                <div class="glowing-cyber-circle">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
             </div>
         </div>
@@ -142,9 +132,45 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title" data-i18n="projects_title">Projects</h2>
+            <h2 class="section-title" data-i18n="projects_title">المشاريع والأكواد اللي طبختها</h2>
             <div class="projects-grid" id="projects-container">
                 <!-- Projects will be dynamically loaded by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section id="open-source" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title" data-i18n="open_source_title">مشاريع مفتوحة المصدر (Open Source)</h2>
+            <p class="section-subtitle" data-i18n="open_source_subtitle">أدوات وبرامج مجانية عملتها وللجميع للمشاركة والتطوير (اضغط على الكارت لفتح الكود)</p>
+            
+            <div class="open-source-grid">
+                <a href="https://github.com/de77fult/PyNotepad-Lite" target="_blank" class="os-card">
+                    <div class="os-card-header">
+                        <span class="os-tag">Python / Tkinter</span>
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>PyNotepad-Lite</h3>
+                    <p data-i18n="os_desc_notepad">مفكرة نصوص بسيطة ومحمولة معمولة بلغة بايثون، بيوفر ميزات مفيدة وتعديل سهل بضغطة زر.</p>
+                    <div class="os-card-footer">
+                        <span><i class="fas fa-code-branch"></i> Forks <strong class="forks-count">6</strong></span>
+                        <span><i class="fas fa-star"></i> Stars <strong class="stars-count">18</strong></span>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/de77fult/WinScreen-Lite" target="_blank" class="os-card">
+                    <div class="os-card-header">
+                        <span class="os-tag">Python Desktop Tool</span>
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>WinScreen-Lite</h3>
+                    <p data-i18n="os_desc_winscreen">أداة خفيفة وسهلة جداً لتسجيل شاشة الكمبيوتر بصيغة فيديو، ما تستهلك من رام الجهاز ويتوفر أزرار تحكم سريعة.</p>
+                    <div class="os-card-footer">
+                        <span><i class="fas fa-code-branch"></i> Forks <strong class="forks-count">4</strong></span>
+                        <span><i class="fas fa-star"></i> Stars <strong class="stars-count">12</strong></span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -189,8 +215,11 @@
                 <a href="https://www.youtube.com/@MohamedTechnology-z4c" target="_blank" class="social-btn youtube">
                     <i class="fab fa-youtube"></i> YouTube
                 </a>
+                <a href="https://www.tiktok.com/@jujtsu2020gojo5" target="_blank" class="social-btn tiktok">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
             </div>
-            <p class="copyright" data-i18n="copyright">&copy; 2025 Mohamed Ahmed Mohamed Khater. All rights reserved.
+            <p class="copyright" data-i18n="copyright">&copy; 2026 Mohamed Wael. All rights reserved.
             </p>
         </div>
     </footer>
@@ -293,6 +322,12 @@
                                 <input type="url" id="proj-link" required placeholder="https://...">
                             </div>
 
+                            <!-- Custom Image Uploader from computer -->
+                            <div class="form-group">
+                                <label for="proj-image-file">Project Image (Upload from Computer)</label>
+                                <input type="file" id="proj-image-file" accept="image/*" style="padding: 10px;">
+                            </div>
+
                             <!-- Dual Language Description -->
                             <div class="form-group">
                                 <label for="proj-desc-en">Project Description (EN)</label>
@@ -332,6 +367,16 @@
             <button id="cyber-alert-btn" class="btn-dashboard primary-btn" style="margin-top: 15px; width: auto; padding: 10px 30px;">ACKNOWLEDGE</button>
         </div>
     </div>
+
+    <!-- Floating Bottom Dock Navigation -->
+    <nav class="floating-dock">
+        <a href="#" class="dock-item" data-i18n="nav_home"><i class="fas fa-home"></i><span class="dock-label">الرئيسية</span></a>
+        <a href="#projects" class="dock-item" data-i18n="nav_projects"><i class="fas fa-code-branch"></i><span class="dock-label">مشاريعي</span></a>
+        <a href="#open-source" class="dock-item" data-i18n="nav_open_source"><i class="fas fa-code"></i><span class="dock-label">أوبن سورس</span></a>
+        <a href="#skills" class="dock-item" data-i18n="nav_skills"><i class="fas fa-laptop"></i><span class="dock-label">مهاراتي</span></a>
+        <a href="#contact" class="dock-item" data-i18n="nav_contact_videos"><i class="fas fa-video"></i><span class="dock-label">فيديوهاتي</span></a>
+        <a href="#contact" class="dock-item" data-i18n="nav_contact"><i class="fas fa-envelope"></i><span class="dock-label">كلمني</span></a>
+    </nav>
 
     <script src="script.js"></script>
 </body>

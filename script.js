@@ -45,31 +45,35 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_about: "About",
             nav_skills: "Skills",
             nav_projects: "Projects",
+            nav_open_source: "Open Source",
+            nav_contact_videos: "Videos",
             nav_experience: "Experience",
-            nav_contact: "Social Media",
+            nav_contact: "Contact Me",
             hero_greeting: "Hello, I'm",
-            hero_name: "Mohamed Ahmed Mohamed Khater",
-            hero_title: "Python Learner | Cyber Security",
+            hero_greeting_pill: "Welcome to my tech space, buddy!",
+            hero_name: "Mohamed Wael",
+            hero_title: "Full-Stack Developer & Open Source Contributor",
+            hero_desc: "I'm Mohamed Wael, I build full-stack web applications and blazing fast websites. I love contributing to open-source tools and creating content to help the developer community on YouTube and TikTok.",
             hero_location: "USA",
-            btn_projects: "View Projects",
+            btn_projects: "Check My Projects",
             btn_contact: "Social Media",
+            btn_youtube: "YouTube Channel",
             about_title: "About Me",
-            about_p1: "I am a 14-year-old Python learner from Sudan, interested in cyber security and System protection. I started learning programming early and focus on understanding concepts through practice, experimentation, and building small projects.",
-            about_p2: "I am learning Python with a focus on cyber security and data basics. I mainly learn through educational videos and by trying things myself, fixing mistakes, and improving my code.",
-            about_p3: "My goal is to continue learning Python and Cyber Security, improve my skills, and in the future become a Cyber Security Engineer working on secure and protected systems.",
-            card_ai_title: "Cyber Security & Systems",
-            card_ai_desc: "Focusing on system protection",
-            card_python_title: "Python",
-            card_python_desc: "Building step by step",
+            about_p1: "I am Mohamed Wael, a developer interested in full-stack web development, building clean interfaces, and participating in open-source projects. I enjoy creating content and sharing technical solutions with other developers.",
+            about_p2: "I build responsive, high-performance web applications and tools. I focus on modern architectures, responsive layouts, and user-centric features.",
+            about_p3: "My goal is to continue learning and building modern applications, contributing to the tech community, and helping other developers level up.",
+            card_ai_title: "Full-Stack Web Dev",
+            card_ai_desc: "Building clean applications",
+            card_python_title: "Open Source",
+            card_python_desc: "Sharing tools for everyone",
             skills_title: "Skills",
             skill_prog: "Programming",
-            skill_py: "Python (Beginner-Intermediate)",
-            skill_game_logic: "Network basics",
-
-            skill_gamedev: "Game Development",
-            skill_map: "Map Design",
-            skill_tools: "Tools",
-            projects_title: "Projects",
+            skill_py: "JavaScript & Python",
+            skill_game_logic: "HTML & CSS",
+            skill_gamedev: "Web Development",
+            skill_map: "React & Next.js",
+            skill_tools: "Tools & Git",
+            projects_title: "Projects & Codes I've Cooked",
             proj_roblox_title: "Roblox Map",
             proj_roblox_desc: "A Roblox map I created that was played by 820+ players, helping me learn about game design and player interaction.",
             play_game: "Try Now",
@@ -79,16 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
             exp_date1: "",
             exp_role1: "Independent Learner & Project Builder",
             exp_desc1: "Started learning Python basics, focusing on variables, loops, and functions. Built small command-line tools.",
-            exp_list1_1: "Practicing Python by building small programs and games",
-            exp_list1_2: "Learning cyber security and data basics step by step",
-            exp_list1_3: "Improving through mistakes and experimentation",
+            exp_list1_1: "Practicing programming by building applications and web tools",
+            exp_list1_2: "Learning modern web frameworks and backend integrations",
+            exp_list1_3: "Improving through open-source contributions and community projects",
             exp_date2: "",
             exp_role2: "What I’m Learning Now",
-            exp_list2_1: "Learn Kali Linux",
-            exp_list2_2: "Cyber security and system protection concepts",
-            exp_list2_3: "Logical thinking and problem-solving",
+            exp_list2_1: "Full-Stack architectures",
+            exp_list2_2: "Advanced system integrations and APIs",
+            exp_list2_3: "Creating valuable content on YouTube and TikTok",
             contact_title: "Social Media",
-            copyright: "&copy; 2025 Mohamed Ahmed Mohamed Khater. All rights reserved.",
+            copyright: "&copy; 2026 Mohamed Wael. All rights reserved.",
+            open_source_title: "Open Source Projects",
+            open_source_subtitle: "Free tools and software I built for everyone to contribute and develop (click card to view code)",
             
             // Admin Panel Translations
             photo_hidden: "Profile Secured",
@@ -106,37 +112,42 @@ document.addEventListener('DOMContentLoaded', () => {
             restore_photo_btn: "Restore Profile Photo",
             add_project: "Add New Project",
             add_project_desc: "Fill out details in English and Arabic to expand your portfolio.",
-            save_project: "Save & Publish Project"
+            save_project: "Add Project"
         },
         ar: {
+            nav_home: "الرئيسية",
             nav_about: "عنّي",
             nav_skills: "المهارات",
             nav_projects: "المشاريع",
+            nav_open_source: "أوبن سورس",
+            nav_contact_videos: "فيديوهاتي",
             nav_experience: "الخبرة",
-            nav_contact: "وسائل التواصل الاجتماعي",
+            nav_contact: "كلمني",
             hero_greeting: "مرحباً، أنا",
-            hero_name: "محمد أحمد محمد خاطر",
-            hero_title: "متعلم بايثون | الأمن السيبراني",
+            hero_greeting_pill: "منور يا زميلي في مساحتي التقنية",
+            hero_name: "معاك محمد وائل",
+            hero_title: "Full-Stack Developer & Open Source Contributor",
+            hero_desc: "أنا محمد وائل، بعمل تطبيقات ويب متكاملة ومواقع طلقة، وبحب أشارك في بناء الأدوات مفتوحة المصدر وصناعة المحتوى، اللي بيفيد مجتمع المطورين على يوتيوب وتيك توك.",
             hero_location: "الولايات المتحدة الأمريكية",
-            btn_projects: "عرض المشاريع",
+            btn_projects: "بص على مشاريعي",
             btn_contact: "تواصل معي",
+            btn_youtube: "تابعني على يوتيوب",
             about_title: "نبذة عني",
-            about_p1: "أنا متعلم بايثون عمري 14 عاماً من السودان، مهتم بالأمن السيبراني وحماية النظام. بدأت تعلم البرمجة مبكراً وأركز على فهم المفاهيم من خلال الممارسة والتجربة وبناء المشاريع الصغيرة.",
-            about_p2: "أنا أتعلم بايثون مع التركيز على أساسيات الأمن السيبراني والبيانات. أتعلم بشكل أساسي عبر الفيديوهات التعليمية وتجربة الأشياء بنفسي، وإصلاح الأخطاء، وتحسين الكود.",
-            about_p3: "هدفي هو الاستمرار في تعلم بايثون والأمن السيبراني، وتحسين مهاراتي، وأن أصبح في المستقبل مهندس أمن سيبراني أعمل على الأنظمة الآمنة والمحمية.",
-            card_ai_title: "الأمن السيبراني والأنظمة",
-            card_ai_desc: "التركيز على حماية الأنظمة",
-            card_python_title: "بايثون",
-            card_python_desc: "البناء خطوة بخطوة",
+            about_p1: "أنا محمد وائل، مطور برمجيات مهتم بتطوير الويب المتكامل وبناء واجهات مستخدم متميزة والمشاركة في المشاريع مفتوحة المصدر. أحب صناعة المحتوى التقني ومشاركة الحلول البرمجية مع المطورين.",
+            about_p2: "أعمل على بناء تطبيقات ويب سريعة ومصممة بعناية فائقة. أركز على الأداء العالي والتصميم المستجيب وتوفير تجربة مستخدم فريدة.",
+            about_p3: "هدفي هو الاستمرار في التعلم وبناء التطبيقات الحديثة، والمساهمة الفعالة في المجتمع التقني لمساعدة زملائي المطورين على التطور.",
+            card_ai_title: "تطوير الويب المتكامل",
+            card_ai_desc: "بناء تطبيقات ويب متكاملة",
+            card_python_title: "مشاريع مفتوحة المصدر",
+            card_python_desc: "مشاركة الأدوات البرمجية للجميع",
             skills_title: "المهارات",
             skill_prog: "البرمجة",
-            skill_py: "بايثون (مبتدئ-متوسط)",
-            skill_game_logic: "أساسيات الشبكات",
-
-            skill_gamedev: "تطوير الألعاب",
-            skill_map: "تصميم الخرائط",
-            skill_tools: "الأدوات",
-            projects_title: "المشاريع",
+            skill_py: "جافا سكريبت وبايثون",
+            skill_game_logic: "HTML & CSS",
+            skill_gamedev: "تطوير الويب",
+            skill_map: "React & Next.js",
+            skill_tools: "أدوات التطوير و Git",
+            projects_title: "المشاريع والأكواد اللي طبختها",
             proj_roblox_title: "خريطة روبلوكس",
             proj_roblox_desc: "خريطة روبلوكس أنشأتها وتم لعبها من قبل أكثر من 820 لاعب، مما ساعدني على تعلم تصميم الألعاب وتفاعل اللاعبين.",
             play_game: "جرب الآن",
@@ -146,16 +157,18 @@ document.addEventListener('DOMContentLoaded', () => {
             exp_date1: "",
             exp_role1: "متعلم مستقل وباني مشاريع",
             exp_desc1: "بدأت تعلم أساسيات بايثون، والتركيز على المتغيرات والحلقات والدوال. بنيت أدوات صغيرة تعمل بسطر الأوامر.",
-            exp_list1_1: "ممارسة بايثون عبر بناء برامج وألعاب صغيرة",
-            exp_list1_2: "تعلم أساسيات الأمن السيبراني والبيانات خطوة بخطوة",
-            exp_list1_3: "التحسين من خلال الأخطاء والتجريب",
+            exp_list1_1: "ممارسة البرمجة عبر بناء برامج وأدوات ويب مفيدة",
+            exp_list1_2: "تعلم أطر العمل الحديثة وتكاملات الخوادم والـ APIs",
+            exp_list1_3: "التحسين المستمر من خلال المساهمة في المشاريع مفتوحة المصدر",
             exp_date2: "",
             exp_role2: "ما أتعلمه الآن",
-            exp_list2_1: "تعلم كالي لينكس",
-            exp_list2_2: "مفاهيم الأمن السيبراني وحماية النظم",
-            exp_list2_3: "التفكير المنطقي وحل المشكلات",
+            exp_list2_1: "هندسة الويب الكامل (Full-Stack)",
+            exp_list2_2: "تطبيقات الويب المتقدمة والأنظمة المتكاملة",
+            exp_list2_3: "صناعة محتوى تقني متميز على يوتيوب وتيك توك",
             contact_title: "وسائل التواصل الاجتماعي",
-            copyright: "&copy; 2025 محمد أحمد محمد خاطر. جميع الحقوق محفوظة.",
+            copyright: "&copy; 2026 محمد وائل. جميع الحقوق محفوظة.",
+            open_source_title: "مشاريع مفتوحة المصدر (Open Source)",
+            open_source_subtitle: "أدوات وبرامج مجانية عملتها وللجميع للمشاركة والتطوير (اضغط على الكارت لفتح الكود)",
             
             // Admin Panel Translations (Arabic)
             photo_hidden: "الحساب محمي",
@@ -173,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
             restore_photo_btn: "استعادة الصورة الشخصية",
             add_project: "إضافة مشروع جديد",
             add_project_desc: "أدخل التفاصيل باللغتين الإنجليزية والعربية لتوسيع معرض أعمالك.",
-            save_project: "حفظ ونشر المشروع"
         }
     };
 
@@ -628,60 +640,92 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Custom Project Addition Form
+    // 4. Custom Project Addition Form
     const addProjectForm = document.getElementById('add-project-form');
     if (addProjectForm) {
         addProjectForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Extract values
-            const titleEn = document.getElementById('proj-title-en').value.trim();
-            const titleAr = document.getElementById('proj-title-ar').value.trim();
-            const tech = document.getElementById('proj-tech').value.trim();
-            const status = document.getElementById('proj-status').value;
-            const link = document.getElementById('proj-link').value.trim();
-            const descEn = document.getElementById('proj-desc-en').value.trim();
-            const descAr = document.getElementById('proj-desc-ar').value.trim();
+            const fileInput = document.getElementById('proj-image-file');
+            const file = fileInput && fileInput.files ? fileInput.files[0] : null;
 
-            // Construct new project object
-            const newProject = {
-                id: 'custom_' + Date.now(),
-                title: {
-                    en: titleEn,
-                    ar: titleAr
-                },
-                tech: tech,
-                desc: {
-                    en: descEn,
-                    ar: descAr
-                },
-                img: null, // No image thumbnail for custom projects
-                link: link,
-                status: status,
-                icon: 'fas fa-shield-alt' // Elegant Cyber Security default icon
-            };
+            function saveProjectWithImage(imgData) {
+                // Extract values
+                const titleEn = document.getElementById('proj-title-en').value.trim();
+                const titleAr = document.getElementById('proj-title-ar').value.trim();
+                const tech = document.getElementById('proj-tech').value.trim();
+                const status = document.getElementById('proj-status').value;
+                const link = document.getElementById('proj-link').value.trim();
+                const descEn = document.getElementById('proj-desc-en').value.trim();
+                const descAr = document.getElementById('proj-desc-ar').value.trim();
 
-            // Save to localStorage
-            const customProjects = JSON.parse(localStorage.getItem('portfolio_projects') || '[]');
-            customProjects.push(newProject);
-            localStorage.setItem('portfolio_projects', JSON.stringify(customProjects));
+                // Construct new project object
+                const newProject = {
+                    id: 'custom_' + Date.now(),
+                    title: {
+                        en: titleEn,
+                        ar: titleAr
+                    },
+                    tech: tech,
+                    desc: {
+                        en: descEn,
+                        ar: descAr
+                    },
+                    img: imgData || null, // Base64 data URL
+                    link: link,
+                    status: status,
+                    icon: 'fas fa-code' // Elegant default code icon
+                };
 
-            // Reset form
-            addProjectForm.reset();
+                try {
+                    // Save to localStorage
+                    const customProjects = JSON.parse(localStorage.getItem('portfolio_projects') || '[]');
+                    customProjects.push(newProject);
+                    localStorage.setItem('portfolio_projects', JSON.stringify(customProjects));
 
-            // Re-render projects and notify
-            const currentLang = document.documentElement.lang || 'en';
-            renderProjects(currentLang);
-            renderAdminProjectsList(); // Refresh admin list
-            
-            // Show custom alert
-            showCyberAlert(
-                currentLang === 'ar' ? 'نجاح العملية' : 'System Secure Publish',
-                currentLang === 'ar' ? 'تمت إضافة المشروع بنجاح!' : 'Your new project has been safely published to your portfolio!',
-                true
-            );
-            
-            // Close panel
-            closeAdminPanel();
+                    // Reset form
+                    addProjectForm.reset();
+
+                    // Re-render projects and notify
+                    const currentLang = document.documentElement.lang || 'en';
+                    renderProjects(currentLang);
+                    renderAdminProjectsList(); // Refresh admin list
+                    
+                    // Show custom alert
+                    showCyberAlert(
+                        currentLang === 'ar' ? 'نجاح العملية' : 'System Secure Publish',
+                        currentLang === 'ar' ? 'تمت إضافة المشروع بنجاح!' : 'Your new project has been safely published to your portfolio!',
+                        true
+                    );
+                    
+                    // Close panel
+                    closeAdminPanel();
+                } catch (err) {
+                    console.error("QuotaExceededError or other error during storage:", err);
+                    const currentLang = document.documentElement.lang || 'en';
+                    showCyberAlert(
+                        currentLang === 'ar' ? 'فشل الحفظ' : 'Publish Failed',
+                        currentLang === 'ar' 
+                            ? 'الصورة المرفوعة كبيرة جداً! يرجى رفع صورة بحجم أصغر (أقل من 1 ميجابايت).' 
+                            : 'The selected image is too large! Please upload a smaller image file (under 1MB).',
+                        false
+                    );
+                }
+            }
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    saveProjectWithImage(event.target.result);
+                };
+                reader.onerror = function() {
+                    console.error("FileReader failed");
+                    saveProjectWithImage(null);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                saveProjectWithImage(null);
+            }
         });
     }
 
@@ -704,10 +748,13 @@ document.addEventListener('DOMContentLoaded', () => {
             item.className = 'custom-proj-item';
             
             const titleVal = proj.title[currentLang] || proj.title['en'];
+            const thumbnailHTML = proj.img 
+                ? `<img src="${proj.img}" alt="${titleVal}" class="custom-proj-thumbnail">` 
+                : `<div class="custom-proj-thumbnail-placeholder"><i class="fas fa-code"></i></div>`;
 
             item.innerHTML = `
                 <div class="custom-proj-info">
-                    <img src="${proj.img}" alt="${titleVal}" class="custom-proj-thumbnail">
+                    ${thumbnailHTML}
                     <div class="custom-proj-details">
                         <span class="custom-proj-title-val">${titleVal}</span>
                         <span class="custom-proj-tech-val">${proj.tech}</span>
